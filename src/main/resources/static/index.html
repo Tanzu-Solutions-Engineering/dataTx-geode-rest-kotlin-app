@@ -1,0 +1,59 @@
+<pre>
+<h1s>Data Extensions Data Services</h1s>
+
+Rest Data service example code repository
+
+
+<h2>Building</h2>
+
+
+For maven to access the GemFire library artifacts, you must add an entry to your .m2/settings.xml file:
+
+	   &lt;settings&gt;
+	       &lt;servers&gt;
+	           &lt;server&gt;
+	               &lt;id&gt;gemfire-release-repo&lt;/id&gt;
+	               &lt;username&gt;MY-USERNAME@example.com&lt;/username&gt;
+	               &lt;password&gt;MY-DECRYPTED-PASSWORD&lt;/password&gt;
+	           &lt;/server&gt;
+	       &lt;/servers&gt;
+	   &lt;/settings&gt;
+
+See <a href="https://gemfire.docs.pivotal.io/gemfire/getting_started/installation/obtain_gemfire_maven.html">https://gemfire.docs.pivotal.io/gemfire/getting_started/installation/obtain_gemfire_maven.html</a>
+
+<h2>GemFire Environments</h2>
+
+Examples
+
+    spring_data_gemfire_pool_locators=server1[10334],server2[10334]
+	spring_security_user_name=admin
+	spring_security_user_password=admin
+	spring_data_gemfire_name=MyAppName
+
+<h1> Example Data Services</h1>
+
+This is an example Spring Boot based app that provides the following GemFire features.
+
+<a href="rest.html">(gedi-geode-data-services-rest) Example REST API for GemFire region data</a>
+
+
+<li>POST region with region key and value to put data into a region</li>
+<li>GET region name and key to read.</li>
+
+
+When starting the application you must provide the Spring Properties. Note that
+	spring support Java System properties, application.yml or application.properites
+	or System environments.
+
+	spring.data.gemfire.pool.locators=localhost[10334]
+	spring.security.user.name=admin
+	spring.security.user.password=admin
+	spring.data.gemfire.name=AppName
+
+</pre>
+
+<h2>Testing</h2>
+
+<div>
+	<a href="swagger-ui.html">Swagger UI</a>
+</div>

@@ -1,0 +1,11 @@
+---
+applications:
+  - name: geode-rest-kotlin-app
+    buildpack: https://github.com/cloudfoundry/java-buildpack.git#v4.16
+    memory: 1G
+    env:
+      JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 11.+}}'
+      spring.security.user.name: admin
+      spring.security.user.password: admin
+    services:
+      - gemfire
